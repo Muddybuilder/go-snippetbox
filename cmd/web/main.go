@@ -8,6 +8,7 @@ import (
 
 func main() {
 	addr := flag.String("addr", ":4000", "HTTP addr")
+	flag.Parse()
 	mux := http.NewServeMux()
 
 	fileServer := http.FileServer(http.Dir("./ui/static/"))
